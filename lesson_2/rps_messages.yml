@@ -1,0 +1,13 @@
+welcome: 'Welcome to Rock, Paper, Scissors, Lizard, Spock!'
+line: '------------------------------------------------'
+ast_line: '* * * * * * * * * * * * * * * * * * * * * * * *'
+grand_winner: 'To be the grand winner you must win three games'
+abbreviations: 'or its abbreviation: r = rock, p = paper, sc = scissors, l = lizard, sp = spock'
+not_valid: "That's not a valid choice."
+win: 'You win this round!'
+tie: 'This round is a tie.'
+lose: 'The computer wins this round.'
+congrats: 'CONGRATULATIONS! You won three games and are now the grand winner!'
+sorry: 'Sorry, you lost three games -- game over.'
+play_again?: "Would you like to play again? ('y' to play again)"
+bye: 'Thank you for playing. Good bye!'
