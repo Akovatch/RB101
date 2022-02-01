@@ -3,25 +3,20 @@ MESSAGES = YAML.load_file('rps_messages.yml')
 
 VALID_CHOICES = %w(rock paper scissors lizard spock)
 ABBREVIATED_CHOICES = %w(r p sc l sp)
-WINNING_COMBOS = [
-  ['rock', 'lizard'],
-  ['rock', 'scissors'],
-  ['paper', 'rock'],
-  ['paper', 'spock'],
-  ['scissors', 'paper'],
-  ['scissors', 'lizard'],
-  ['lizard', 'spock'],
-  ['lizard', 'paper'],
-  ['spock', 'scissors'],
-  ['spock', 'rock']
-]
+WINNING_COMBOS = {
+    'rock' => ['scissors', 'lizard'],
+    'paper' => ['rock', 'spock'],
+    'scissors' => ['paper', 'lizard'],
+    'lizard' => ['spock', 'paper'],
+    'spock' => ['scissors', 'rock']
+   }
 
 def prompt(message)
   puts("=> #{message}")
 end
 
-def win?(first, second)
-  WINNING_COMBOS.include?([first, second])
+def win?(first_choice, second_choice)
+  WINNING_COMBOS[first_choice].include?(second_choice)
 end
 
 def convert_abbreviation(input)
@@ -43,6 +38,7 @@ def get_player_choice
     input = gets.chomp.downcase
 
     if VALID_CHOICES.include?(input) || ABBREVIATED_CHOICES.include?(input)
+      input.length <= 2 ? (input = convert_abbreviation(input)) : input
       break
     else
       prompt(MESSAGES['not_valid'])
@@ -88,8 +84,6 @@ loop do
   loop do
     choice = get_player_choice
 
-    choice.length <= 2 ? (choice = convert_abbreviation(choice)) : choice
-
     computer_choice = VALID_CHOICES.sample
 
     system "clear"
@@ -126,7 +120,7 @@ loop do
   puts
   prompt(MESSAGES['play_again?'])
   answer = gets.chomp.downcase
-  break unless answer.start_with?('y')
+  break unless answer == 'y' || answer == 'yes'
 end
 
 prompt(MESSAGES['bye'])
