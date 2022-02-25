@@ -1,0 +1,11 @@
+press_any: 'Press any key to begin playing'
+which_player: 'Which player would you like to get first move?'
+enter_player: "Enter 'user' (or 'u') to go first, or 'computer' (or 'c') to let the computer go first:"
+sorry: "Sorry, that's not a valid choice."
+user_wins: 'You win this round!'
+compy_wins: 'Computer wins this round.'
+tie: 'This round is a tie.'
+another_round: "Press any key to begin the next round (or 'q' to quit):"
+new_game: 'Would you like to start a new game?'
+new_game_prompt: "Press 'y' to play again, or any other key to quit:"
+thanks: "Thank you for playing Tic Tac Toe! Goodbye!"
