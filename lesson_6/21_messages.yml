@@ -1,0 +1,18 @@
+press_any: 'Press any key to begin playing'
+dealer_hit: "Dealer decides to hit!"
+dealer_stay: "Dealer decides to stay"
+hit_or_stay: "Would you like to (h)it or (s)tay? (Type 'h' or 's')"
+h_or_s: "Sorry, must enter 'h' or 's'."
+hit: "You chose to hit!"
+busted: "*** Oh no! You busted! This means the dealer wins this round. ***"
+stay: "You chose to stay!"
+congrats: "*** Congratulations, you won this round! ***"
+dealer_won: '*** Sorry, the dealer won this round. ***'
+tie: '*** This round was a tie. ***'
+line: "====================================="
+final_hands: "============ Final Hands ============"
+new_game: 'Would you like to start a new game?'
+new_game_prompt: "Press 'y' to play again, or any other key to quit:"
+another_round: "Press any key to begin the next round (or 'q' to quit):"
+any_key_round: "Press any key to start next round:"
+dealer_turn: "Now its the dealer's turn..."
