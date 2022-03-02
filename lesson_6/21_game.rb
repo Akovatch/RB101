@@ -130,7 +130,7 @@ def dealer_turn(cards, deck, turn_total)
       hit(cards, deck)
       turn_total = total(cards)
       prompt MESSAGES['dealer_hit']
-    elsif turn_total > DEALER_FLOOR
+    elsif turn_total >= DEALER_FLOOR
       prompt MESSAGES['dealer_stay']
       break
     end
