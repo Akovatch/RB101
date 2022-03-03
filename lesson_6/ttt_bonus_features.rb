@@ -246,11 +246,11 @@ end
 
 def display_grandwinner(scores)
   if scores[:wins] == 5
-    prompt "Congratulations! You have won #{GRAND_WINNER}"\
-            " times and are the grand winner!"
+    prompt "*** Congratulations! You have won #{GRAND_WINNER}"\
+            " times and are the grand winner! ***"
   else
-    prompt "Sorry, the computer has won #{GRAND_WINNER}"\
-            " times and is the grand winner."
+    prompt "*** Sorry, the computer has won #{GRAND_WINNER}"\
+            " times and is the grand winner. ***"
   end
 end
 
@@ -263,7 +263,7 @@ def play_another_round?
 end
 
 def restart_game?
-  system 'clear'
+  puts
   prompt MESSAGES['new_game']
   prompt MESSAGES['new_game_prompt']
   answer = gets.chomp
