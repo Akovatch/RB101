@@ -177,13 +177,13 @@ def total(cards)
 
   sum = 0
   values.each do |value|
-    if value == 'A'
-      sum += 11
-    elsif value.to_i == 0 # J, Q, K
-      sum += 10
-    else
-      sum += value.to_i
-    end
+    sum += if value == 'A' 
+             11
+           elsif value.to_i == 0 # J, Q, K
+             10
+           else
+             value.to_i
+           end
   end
 
   values.select { |value| value == 'A' }.count.times do # correcting for aces
